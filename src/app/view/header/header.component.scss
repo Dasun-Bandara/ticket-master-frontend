@@ -1,0 +1,17 @@
+.nav-item {
+  display: flex;
+  justify-content: center;
+  border: lightgray 1px solid;
+  width: 150px;
+  padding: 5px;
+  transition: background-color 500ms;
+}
+
+.nav-item:hover {
+  background: lightgray;
+}
+
+#title {
+  background-color: blue;
+  color: white;
+}
