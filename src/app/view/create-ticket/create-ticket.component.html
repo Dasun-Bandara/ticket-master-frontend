@@ -1,19 +1,19 @@
-<header class="mt-2">
+<header class="mt-5">
   <h1 class="title fs-2 text-center">Create Ticket</h1>
 </header>
 <main>
-  <form>
-    <div class="d-flex gap-2 pe-2 ps-2 mt-2">
+  <form #frmNgForm="ngForm">
+    <div class="d-flex gap-2 pe-2 ps-2 mt-4">
       <div class="mb-3 flex-grow-1">
         <label for="registration-number" class="form-label ps-2">Vehicle Registration NO:</label>
-        <input type="text" class="form-control" id="registration-number" placeholder="ABC-1234">
+        <input required [(ngModel)]="regNo" pattern="^[A-Z0-9-]{6,10}$" name="reg-number" type="text" class="form-control" id="registration-number" placeholder="ABC-1234">
       </div>
       <div class="mb-3 flex-grow-1">
         <label for="contact-number" class="form-label ps-2">Contact NO:</label>
-        <input type="text" class="form-control" id="contact-number" placeholder="077-1234567">
+        <input required [(ngModel)]="contact" pattern="^0[1-9][0-9]-[0-9]{7}$" name="contact" type="text" class="form-control" id="contact-number" placeholder="077-1234567">
       </div>
     </div>
-    <div class="text-center">Vehicle Category:</div>
+    <div class="text-center mt-3">Vehicle Category:</div>
     <div class="d-flex justify-content-center gap-3 mt-2">
       <div class="vehicle-category form-check position-relative p-0">
         <label class="form-check-label" for="category-a">
@@ -21,7 +21,7 @@
             <img class="image" src="assets/images/vehicle_categories/bike.jpg" alt="bike">
           </div>
         </label>
-        <input class="form-check-input position-absolute radio-inputs" type="radio" name="category" id="category-a">
+        <input required ngModel class="form-check-input position-absolute radio-inputs" type="radio" name="category" value="category-1" id="category-a">
       </div>
       <div class="vehicle-category form-check position-relative p-0">
         <label class="form-check-label" for="category-b">
@@ -29,7 +29,7 @@
             <img class="image" src="assets/images/vehicle_categories/three_wheeler.png" alt="three wheeler">
           </div>
         </label>
-        <input class="form-check-input position-absolute radio-inputs" type="radio" name="category" id="category-b">
+        <input required ngModel class="form-check-input position-absolute radio-inputs" type="radio" name="category" value="category-2" id="category-b">
       </div>
       <div class="vehicle-category form-check position-relative p-0">
         <label class="form-check-label" for="category-c">
@@ -37,7 +37,7 @@
             <img class="image" src="assets/images/vehicle_categories/car.jpg" alt="car">
           </div>
         </label>
-        <input class="form-check-input position-absolute radio-inputs" type="radio" name="category" id="category-c">
+        <input required ngModel class="form-check-input position-absolute radio-inputs" type="radio" name="category" value="category-3" id="category-c">
       </div>
       <div class="vehicle-category form-check position-relative p-0">
         <label class="form-check-label" for="category-d">
@@ -45,7 +45,7 @@
             <img class="image" src="assets/images/vehicle_categories/bus.jpg" alt="bus">
           </div>
         </label>
-        <input class="form-check-input position-absolute radio-inputs" type="radio" name="category" id="category-d">
+        <input required ngModel class="form-check-input position-absolute radio-inputs" type="radio" name="category" value="category-4" id="category-d">
       </div>
       <div class="vehicle-category form-check position-relative p-0">
         <label class="form-check-label" for="category-e">
@@ -53,8 +53,16 @@
             Other
           </div>
         </label>
-        <input class="form-check-input position-absolute radio-inputs" type="radio" name="category" id="category-e">
+        <input required ngModel class="form-check-input position-absolute radio-inputs" type="radio" name="category" value="category-5" id="category-e">
       </div>
+    </div>
+    <div class="cph mb-3 flex-grow-1 d-grid align-items-center ps-2 pe-2 mt-4">
+      <label for="charge-per-hour" class="form-label">Charge Per Hour:</label>
+      <input name="charge" type="text" class="form-control" id="charge-per-hour" placeholder="0.00">
+    </div>
+    <div class="d-flex gap-5 justify-content-center mt-5 pt-5">
+      <button type="button" class="btn btn-secondary">REFRESH</button>
+      <button [disabled]="frmNgForm.invalid" type="button" class="btn btn-primary">CREATE</button>
     </div>
   </form>
 </main>

@@ -5,13 +5,11 @@
 .vehicle-category {
   width: 150px;
   height: 130px;
-  //background-color: burlywood;
 }
 
 .image-box {
   width: 150px;
   height: 100px;
-  //background-color: lightgreen;
 }
 
 .radio-inputs {
@@ -22,4 +20,22 @@
 .image {
   object-fit: contain;
   width: 150px;
+}
+
+.cph {
+  grid-template-columns: 150px 1fr;
+}
+
+.btn {
+  width: 150px;
+}
+
+input[type="text"]{
+  &.ng-dirty.ng-valid:focus {
+    outline: 4px rgba(50,190,58,0.4) solid;
+  }
+
+  &.ng-dirty.ng-invalid:focus {
+    outline: 4px rgba(245,77,58,0.4) solid;
+  }
 }
