@@ -1,3 +1,16 @@
 .title {
   color: cornflowerblue;
+}.input-box {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+ }
+
+input[type="text"]{
+  &.ng-dirty.ng-valid:focus {
+    outline: 4px rgba(50,190,58,0.4) solid;
+  }
+
+  &.ng-dirty.ng-invalid:focus {
+    outline: 4px rgba(245,77,58,0.4) solid;
+  }
 }
