@@ -4,15 +4,18 @@
   border: lightgray 1px solid;
   width: 150px;
   padding: 5px;
-  transition: background-color 500ms;
+  transition: background-color 500ms, color 500ms;
+  font-weight: bold;
 }
 
 .nav-item:hover {
   background: lightgray;
   cursor: pointer;
+  color: cornflowerblue;
 }
 
 #title {
   background-color: blue;
   color: white;
+  font-weight: bold;
 }

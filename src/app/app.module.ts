@@ -8,6 +8,7 @@ import { CreateTicketComponent } from './view/create-ticket/create-ticket.compon
 import {FormsModule} from "@angular/forms";
 import { CheckOutComponent } from './view/check-out/check-out.component';
 import { CurrentComponent } from './view/current/current.component';
+import { HistoryComponent } from './view/history/history.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CurrentComponent } from './view/current/current.component';
     HeaderComponent,
     CreateTicketComponent,
     CheckOutComponent,
-    CurrentComponent
+    CurrentComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
