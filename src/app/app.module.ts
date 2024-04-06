@@ -7,13 +7,15 @@ import { HeaderComponent } from './view/header/header.component';
 import { CreateTicketComponent } from './view/create-ticket/create-ticket.component';
 import {FormsModule} from "@angular/forms";
 import { CheckOutComponent } from './view/check-out/check-out.component';
+import { CurrentComponent } from './view/current/current.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CreateTicketComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    CurrentComponent
   ],
   imports: [
     BrowserModule,
