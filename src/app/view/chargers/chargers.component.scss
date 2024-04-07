@@ -1,0 +1,17 @@
+.title {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.category-box {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.category-box h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px lightgray solid;
+  height: 45px;
+}

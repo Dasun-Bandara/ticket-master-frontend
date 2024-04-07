@@ -9,6 +9,8 @@ import {FormsModule} from "@angular/forms";
 import { CheckOutComponent } from './view/check-out/check-out.component';
 import { CurrentComponent } from './view/current/current.component';
 import { HistoryComponent } from './view/history/history.component';
+import { ChargersComponent } from './view/chargers/chargers.component';
+import { ChargeRowComponent } from './view/charge-row/charge-row.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HistoryComponent } from './view/history/history.component';
     CreateTicketComponent,
     CheckOutComponent,
     CurrentComponent,
-    HistoryComponent
+    HistoryComponent,
+    ChargersComponent,
+    ChargeRowComponent
   ],
   imports: [
     BrowserModule,
